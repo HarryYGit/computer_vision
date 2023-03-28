@@ -11,7 +11,9 @@ detected keypoints, e.g.
 # of keypoints in A.jpg is 3180
 
 //Task Two//
-
+/
+Compare each pair of the images using a Bag-of-Words model constructed from SIFT descriptors.
+/
 Step 1: Rescale all images to sizes comparable to VGA (480x600), while maintaining their aspect ratios. However, it is not mandatory to rescale all images to the same size.
 Step 2: Extract SIFT keypoints and descriptors from the Y component of the luminance of all rescaled images. 
 Step 3: Use the K-means algorithm to cluster the SIFT descriptors extracted from ALL images into K-clusters. The value of K should be a percentage of the total number of keypoints, and each cluster represents a visual word.
