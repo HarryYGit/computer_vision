@@ -1,0 +1,23 @@
+//Task One//
+/
+Using OpenCV to detects keypoints from an image and compare two images using SIFT detector andd descriptors.
+/
+Step 1:  Rescale the image properly to a size similar to VGA (480(rows) x 600(columns)), while maintaining the aspect ratio. 
+Step 2:  Extract the SIFT keypoints from the Y component of the image's luminance. 
+Step 3:  Illustrate each detected keypoint, draw a cross " +" at the keypoint location, a circle around the keypoint with a radius proportional to the scale of the keypoint, and a line from the "+" to the circle indicating the orientation of the keypoint. 
+Step 4:  Display both the original image and the image with highlighted keypoints in a window.
+Step 5:  In a command window or Windows Powershell, the program should output the number of
+detected keypoints, e.g.
+# of keypoints in A.jpg is 3180
+
+//Task Two//
+
+Step 1: Rescale all images to sizes comparable to VGA (480x600), while maintaining their aspect ratios. However, it is not mandatory to rescale all images to the same size.
+Step 2: Extract SIFT keypoints and descriptors from the Y component of the luminance of all rescaled images. 
+Step 3: Use the K-means algorithm to cluster the SIFT descriptors extracted from ALL images into K-clusters. The value of K should be a percentage of the total number of keypoints, and each cluster represents a visual word.
+
+Step 4: For each image, generate a histogram of visual words by classifying each SIFT descriptor of the image into one of the K-clusters (words) and counting how many times each word appears in the image.
+Step 5: Calculate the χ2 distance between the normalized histograms of visual words of each pair of images, which measures the dissimilarity of the image pair.
+The program should output the following information:
+	- Number of keypoints for each image and the total number of keypoints of all images, e.g.
+	-Dissimilarity matrices for K=5%, 10% and 20% of the total number of keypoints from all 	  images. Note: please arrange the dissimilarity matrices in a readable format, e.g.
